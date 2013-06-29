@@ -5,7 +5,11 @@ namespace montecarlo{
 
 class Simulator{
 public:
-  double Simulate(int sampling_num);
+  explicit Simulator(int seed);
+  double Simulate(int sampling_num) const;
+private:
+  Simulator();
+  int seed_;
 };
 
 }//montecarlo
