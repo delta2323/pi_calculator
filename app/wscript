@@ -1,0 +1,12 @@
+def options(opt):
+  pass
+
+def configure(conf):
+  pass
+
+def build(bld):
+  bld.program(
+    source = 'SimulatorMain.cpp',
+    target = 'SimulatorMain',
+    use = 'Simulator'
+  )
