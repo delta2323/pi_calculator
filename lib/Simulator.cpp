@@ -7,7 +7,11 @@ double dist2(double x, double y){
   return x*x+y*y;
 }
 
-double Simulator::Simulate(int sampling_num){
+Simulator::Simulator(int seed):seed_(seed){
+  srand(seed);
+}
+
+double Simulator::Simulate(int sampling_num) const{
   int inside_circle_num = 0;
   for(int i = 0; i < sampling_num; ++i){
     double x = static_cast<double>(rand()) / RAND_MAX;
