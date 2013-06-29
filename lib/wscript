@@ -1,0 +1,14 @@
+def options(opt):
+  pass
+
+def configure(conf):
+  pass
+
+def build(bld):
+  bld.shlib(
+    features = 'cxx cshlib',
+    source = ['Simulator.cpp'],
+    target = 'Simulator',
+    name = 'Simulator',
+    use = []
+    )
